@@ -42,12 +42,26 @@ body, html {
 .landing-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* This aligns content to the center vertically */
     align-items: center;
     height: 100%;
     text-align: center;
     padding: 20px;
     position: relative;
+    margin-top: -40px; /* Moves the entire content block up */
+}
+
+/* Adjusting the position of the text to make space for the image */
+.animated-title,
+.profile-container,
+.blurb,
+.nav-links,
+.contact-info {
+    margin-top: 30px;
+}
+
+.profile-container {
+    margin-top: 0;
 }
 
 .animated-title {
@@ -82,7 +96,7 @@ body, html {
 
 /* Profile Image */
 .profile-container {
-    margin-top: 30px;
+    margin-top: 50px; /* Increased this value to lower the profile image */
 }
 
 .profile-image {
@@ -90,6 +104,7 @@ body, html {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center 30%; /* Adjusts the position to slightly above center */
     margin-bottom: 30px;
     border: 5px solid #4a4a77;
     animation: pulse 2s infinite;
