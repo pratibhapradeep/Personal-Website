@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Personal Website</title>
     <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="profile-container">
-                <img src="static/my-image.jpg" alt="Your Picture" class="profile-image">
-                <h1>Your Name</h1>
-                <p class="blurb">A brief blurb about me. Mention my profession, passions, etc.</p>
-            </div>
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#biomedical-research">Biomedical Research</a></li>
+                <li><a href="#finance">Finance</a></li>
+                <li><a href="#computer-science">Computer Science</a></li>
+            </ul>
+        </nav>
+        <div class="hero" id="home">
+            <img src="static/your-image.jpg" alt="Your Picture" class="profile-image">
+            <h1>Your Name</h1>
+            <p class="blurb">A brief blurb about yourself, your profession, and what you offer.</p>
+            <a href="static/your-resume.pdf" target="_blank" class="button">Download My Resume</a>
         </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="static/your-resume.pdf" target="_blank">Download My Resume</a></li>
-            <li><a href="hobbies.html">Hobbies</a></li>
-            <li><a href="biomedical-research.html">Biomedical Research</a></li>
-            <li><a href="finance.html">Finance</a></li>
-            <li><a href="computer-science.html">Computer Science</a></li>
-        </ul>
-    </nav>
+    <main>
+        <section id="hobbies" class="section">
+            <h2>Hobbies</h2>
+            <p>Details about your hobbies.</p>
+        </section>
+        <section id="biomedical-research" class="section">
+            <h2>Biomedical Research</h2>
+            <p>Information about your research.</p>
+        </section>
+        <section id="finance" class="section">
+            <h2>Finance Projects</h2>
+            <p>Details about your finance projects.</p>
+        </section>
+        <section id="computer-science" class="section">
+            <h2>Computer Science</h2>
+            <p>Information about your CS projects.</p>
+        </section>
+    </main>
 
-    <footer>
-        <div class="container">
-            <p>Contact me via email: <a href="mailto:your.email@example.com">my.email@example.com</a></p>
-            <p>Connect on LinkedIn: <a href="https://www.linkedin.com/in/myprofile" target="_blank">LinkedIn</a></p>
-        </div>
+    <footer class="footer">
+        <p>Contact me via email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>Connect on LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
     </footer>
 </body>
-</html>
 
+</html>

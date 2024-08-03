@@ -1,31 +1,66 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-header {
-    background: #4a90e2;
+/* Header and Navbar */
+.header {
+    background-color: #333;
     color: white;
-    padding: 60px 0;
     text-align: center;
+    padding: 50px 0;
     position: relative;
-    overflow: hidden;
 }
 
-.profile-container {
-    display: inline-block;
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #444;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/hero-bg.jpg') center/cover;
+    color: white;
     text-align: center;
 }
 
@@ -34,133 +69,90 @@ header {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid white;
     margin-bottom: 20px;
+    border: 5px solid white;
 }
 
-h1 {
-    margin-top: 10px;
+.hero h1 {
     font-size: 2.5em;
-    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.blurb {
-    margin-top: 10px;
+.hero p.blurb {
     font-size: 1.2em;
-    max-width: 700px;
-    margin: 10px auto 0;
+    max-width: 600px;
+    margin: 0 auto 20px;
 }
 
-/* Navigation Styles */
-nav {
-    background: #333;
-    color: white;
-    padding: 15px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 20px;
-    transition: background 0.3s, color 0.3s;
-}
-
-nav ul li a:hover {
-    background: #555;
-    color: #fff;
-    border-radius: 5px;
-}
-
-/* Section Styles */
-section.content {
-    background: white;
-    margin: 20px 0;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-section.content h2 {
-    margin-top: 0;
-    font-size: 1.8em;
-}
-
-/* Button Styles */
 .button {
-    background: #4a90e2;
-    color: white;
+    display: inline-block;
     padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
-    display: inline-block;
+    transition: background-color 0.3s;
 }
 
 .button:hover {
-    background: #357ABD;
+    background-color: #0056b3;
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 /* Footer Styles */
-footer {
-    background: #4a90e2;
+.footer {
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 30px 0;
+    padding: 20px;
 }
 
-footer a {
+.footer a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-footer a:hover {
+.footer a:hover {
     text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .profile-container {
-        text-align: center;
+    .nav-links {
+        flex-direction: column;
     }
 
-    .profile-image {
-        width: 120px;
-        height: 120px;
+    .nav-links li {
+        margin: 10px 0;
     }
 
-    h1 {
+    .hero h1 {
         font-size: 2em;
     }
 
-    .blurb {
+    .hero p.blurb {
         font-size: 1em;
         padding: 0 10px;
     }
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        display: block;
-        margin: 5px 0;
-    }
-
-    section.content {
-        padding: 20px;
+    .section {
+        padding: 40px 10px;
     }
 }
