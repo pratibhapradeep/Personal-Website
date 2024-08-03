@@ -4,53 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
+    <title>Your Name - Innovative Healthcare</title>
     <link rel="stylesheet" href="static/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Raleway:wght@300;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#biomedical-research">Biomedical Research</a></li>
-                <li><a href="#finance">Finance</a></li>
-                <li><a href="#computer-science">Computer Science</a></li>
-            </ul>
-        </nav>
-        <div class="hero" id="home">
-            <img src="static/your-image.jpg" alt="Your Picture" class="profile-image">
-            <h1>Your Name</h1>
-            <p class="blurb">A brief blurb about yourself, your profession, and what you offer.</p>
-            <a href="static/your-resume.pdf" target="_blank" class="button">Download My Resume</a>
+    <div class="landing-container">
+        <div class="animated-bg"></div>
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 class="animated-title">Your Name</h1>
+            <div class="profile-container">
+                <img src="static/your-image.jpg" alt="Your Picture" class="profile-image">
+                <p class="blurb">Hi, I'm [Your Name], a [Your Profession] passionate about merging technology and healthcare to create innovative solutions.</p>
+            </div>
+            <nav class="nav-links">
+                <a href="hobbies.html" class="nav-link">Hobbies</a>
+                <a href="biomedical-research.html" class="nav-link">Biomedical Research</a>
+                <a href="finance.html" class="nav-link">Finance</a>
+                <a href="computer-science.html" class="nav-link">Computer Science</a>
+            </nav>
+            <div class="contact-info">
+                <a href="mailto:your.email@example.com" class="contact-link">your.email@example.com</a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="contact-link">LinkedIn</a>
+            </div>
         </div>
-    </header>
-
-    <main>
-        <section id="hobbies" class="section">
-            <h2>Hobbies</h2>
-            <p>Details about your hobbies.</p>
-        </section>
-        <section id="biomedical-research" class="section">
-            <h2>Biomedical Research</h2>
-            <p>Information about your research.</p>
-        </section>
-        <section id="finance" class="section">
-            <h2>Finance Projects</h2>
-            <p>Details about your finance projects.</p>
-        </section>
-        <section id="computer-science" class="section">
-            <h2>Computer Science</h2>
-            <p>Information about your CS projects.</p>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>Contact me via email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>Connect on LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
-    </footer>
+    </div>
+    <script src="static/scripts.js"></script>
 </body>
 
 </html>
