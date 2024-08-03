@@ -1,10 +1,13 @@
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('a.nav-link').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        // Check if the link is for the current page (starts with '#')
+        if (anchor.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
@@ -30,15 +33,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Functionality to Trigger Animations on Scroll (Optional)
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-        }
-    });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.fade-in').forEach(section => {
-    observer.observe(section);
-});
+// Func
